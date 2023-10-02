@@ -11,12 +11,14 @@
     <style>
       * {
     scroll-behavior: smooth;
-    }
+        }
         .img1{
             width: 15%;
         }
-
-
+    img:hover,
+    img:focus{
+  transform: scale(1.3); 
+        }
     </style>
 </head>
 <body style="background-color: grey">
@@ -86,40 +88,36 @@
       <div class="container-fluid mt-3" style="text-align: center;">
         <h1 style="text-align: center; color: black;">SELECT YOUR ORDER HERE!</h1>
         <br>
-        <br>
         <p style="text-align: center;color: whitesmoke;"></p>
         <div class="container-fluid" style="padding-left: 10%;">
           <div class="row" style="image-orientation:initial;">
             <div class="col">
-            <div class="card" style="width: 18rem; height: 90%;">
+            <div class="card" style="width: 18rem; height: 100%;">
               <img src="ngohiong.jpg" class="card-img-top" alt="Chinese Ngohiong">
               <div class="card-body">
                 <h5 class="card-title">Chinese Ngohiong</h5>
                 <p class="card-text">Our Chinese Ngohiong is authentic, making it the best tasting ngohiong you will ever have/had!</p>
                 <p>₱15.00 each</p>
-                <a href="#" class="btn btn-primary">Order Here!</a>
               </div>
             </div>
            </div>
            <div class="col">
-            <div class="card" style="width: 18rem; height: 90%;">
+            <div class="card" style="width: 18rem; height: 100%;">
               <img src="siomai.png" class="card-img-top" alt="Siomai">
               <div class="card-body">
                 <h5 class="card-title">Siomai</h5>
                 <p class="card-text">We offer the popular and definitely delicious Siomai sa Tisa!</p>
                 <p>₱10.00 each</p>
-                <a href="#" class="btn btn-primary">Order Here!</a>
               </div>
             </div>
             </div>
             <div class="col">
-            <div class="card" style="width: 18rem; height: 90%;">
+            <div class="card" style="width: 18rem; height: 100%;">
               <img src="drinks.png" class="card-img-top" alt="Drinks">
               <div class="card-body">
                 <h5 class="card-title">Drinks</h5>
                 <p class="card-text">We offer canned drinks, such as sodas and many more!</p>
                 <p>₱ 25.00</p>
-                <a href="#" class="btn btn-primary">Order Here!</a>
               </div>
             </div>
             </div>
@@ -127,6 +125,38 @@
         </div>
       </div>
     </div>
+<div class="container-fluid" style="padding-left: 15%;">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Click here to Order</button> <a style="padding-left: 22%;"></a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Click here to Order</button>
+<a style="padding-left: 23%;"></a>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Click here to Order</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Enter Order Here:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Customer Name:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Order:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Cheeboogs, Inc</p>
