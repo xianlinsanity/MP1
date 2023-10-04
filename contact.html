@@ -25,6 +25,14 @@
         .contact-info{ 
     list-style-type: none;
              }
+             .custom-popover {
+  --bs-popover-max-width: 200px;
+  --bs-popover-border-color: var(--bd-violet-bg);
+  --bs-popover-header-bg: var(--bd-violet-bg);
+  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+}
     </style>
 </head>
 <body style="background-color: white;">
@@ -91,9 +99,26 @@
             <div class="mb-3">
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your message or feedback here..."></textarea>
               <br>
-              <a>
-                <button type="button" class="btn btn-success btn-lg">Submit</button>
-              </a>
+              <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Submit
+              </button>
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Thank you very much for your message/feedback!</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Please keep it coming!
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
