@@ -15,113 +15,7 @@
         .img1{
             width: 25%;
         }
-        * {
-  margin: 0;
-  padding: 0;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.container {
-  position: relative;
-  width: 1160px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  transform-style: preserve-3d;
-  perspective: 500px;
-  margin: auto;
-}
-.container .box {
-  position: relative;
-  width: 275px;
-  height: 275px;
-  background: #000;
-  transition: 0.5s;
-  transform-style: preserve-3d;
-  overflow: hidden;
-  margin-right: 15px;
-  margin-top: 45px;
-}
-.container:hover .box {
-  transform: rotateY(25deg);
-}
-.container .box:hover ~ .box {
-  transform: rotateY(-25deg);
-}
-.container .box:hover {
-  transform: rotateY(0deg) scale(1.25);
-  z-index: 1;
-  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
-}
-.container .box .imgBx {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.container .box .imgBx:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg,#f00,#000);
-  z-index: 1;
-  opacity: 0;
-  transition: 0.5s;
-  mix-blend-mode: multiply;
-}
-.container .box:hover .imgBx:before {
-  opacity: 1;
-}
-.container .box .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.container .box .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  padding: 20px;
-  align-items: flex-end;
-  box-sizing: border-box;
-}
-.container .box .content h2 {
-  color: #fff;
-  transition: 0.5s;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  font-size: 20px;
-  transform: translateY(200px);
-  transition-delay: 0.3s;
-}
-.container .box:hover .content h2 {
-  transform: translateY(0px);
-}
-.container .box .content p {
-  color: #fff;
-  transition: 0.5s;
-  font-size: 14px;
-  transform: translateY(200px);
-  transition-delay: 0.4s;
-}
-.container .box:hover .content p {
-  transform: translateY(0px);
-}
+        
     </style>
 </head>
 <body style="background-color: grey">
@@ -189,51 +83,47 @@ body {
         </button>
       </div>
       <div class="container-fluid mt-3" style="text-align: center;">
-        <h1 style="text-align: center; color: black;">SELECT YOUR ORDER HERE!</h1>
+        <h1 style="text-align: center; color: black;"><span class="placeholder col-12 bg-warning">SELECT YOUR ORDER HERE!</h1></span>
         <br>
         <p style="text-align: center;color: whitesmoke;"></p>
-        <div class="container-fluid container">
-          <div class="box">
-            <div class="imgBx">
-              <img src="pictures/ngohiong.jpg">
-            </div>
-            <div class="content">
-              <div>
-                <h2 class="card-title">Chinese Ngohiong</h2>
+        <div class="container-fluid" style="padding-left: 10%;">
+          <div class="row" style="image-orientation:initial;">
+            <div class="col">
+            <div class="card" style="width: 18rem; height: 100%;">
+              <img src="pictures/ngohiong.jpg" class="card-img-top img2" alt="Chinese Ngohiong">
+              <div class="card-body">
+                <h5 class="card-title">Chinese Ngohiong</h5>
                 <p class="card-text">Our Chinese Ngohiong is authentic, making it the best tasting ngohiong you will ever have/had!</p>
                 <p>₱15.00 each</p>
               </div>
             </div>
-          </div>
-          <div class="box">
-            <div class="imgBx">
-              <img src="pictures/siomai.png">
             </div>
-            <div class="content">
-              <div>
-                <h2 class="card-title">Siomai</h2>
+           <div class="col">
+            <div class="card" style="width: 18rem; height: 100%;">
+              <img src="pictures/siomai.png" class="card-img-top" alt="Siomai">
+              <div class="card-body">
+                <h5 class="card-title">Siomai</h5>
                 <p class="card-text">We offer the popular and definitely delicious Siomai sa Tisa!</p>
                 <p>₱10.00 each</p>
               </div>
             </div>
-          </div>
-          <div class="box">
-            <div class="imgBx">
-              <img src="pictures/drinks.png">
             </div>
-            <div class="content">
-              <div>
-                <h2 class="card-title">Drinks</h2>
+            <div class="col">
+            <div class="card" style="width: 18rem; height: 100%;">
+              <img src="pictures/drinks.png" class="card-img-top" alt="Drinks">
+              <div class="card-body">
+                <h5 class="card-title">Drinks</h5>
                 <p class="card-text">We offer canned drinks, such as sodas and many more!</p>
                 <p>₱ 25.00</p>
               </div>
+            </div>
             </div>
           </div>
         </div>
       </div>
 <br>
-<div class="container-fluid" style="position:absolute; padding-left: 40%;">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Click here to Order</button> <a style="padding-left: 22%;"></a>
+<div class="container-fluid" style="position:absolute; padding-left: 43%;">
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Click here to Order</button> <a style="padding-left: 22%;"></a>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -262,6 +152,8 @@ body {
   </div>
 </div>
 </div>
+<br>
+<br>
 <br>
 <br>
     <div class="container">
